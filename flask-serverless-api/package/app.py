@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import boto3
 import uuid
 import os
 
 app = Flask(__name__)
+CORS(app)
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table(os.environ.get('DYNAMO_TABLE', 'TodoTable'))
 
