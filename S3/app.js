@@ -19,26 +19,6 @@ async function fetchTodos() {
   }
 }
 
-function addTodoToDOM(todo) {
-  const li = document.createElement('li');
-  li.className = 'flex justify-between items-center bg-indigo-100 p-3 rounded-lg';
-
-  li.innerHTML = `
-    <span>${todo.name}</span>
-    <button onclick="deleteTodo('${todo.id}')" class="text-red-600 hover:underline">Delete</button>
-  `;
-
-  todoList.appendChild(li);
-}
-
-async function deleteTodo(id) {
-  try {
-    await fetch(`${apiBaseUrl}/${id}`, { method: 'DELETE' });
-    fetchTodos();
-  } catch (err) {
-    alert('Error deleting task.');
-  }
-}
 
 todoForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -48,15 +28,60 @@ todoForm.addEventListener('submit', async (e) => {
   try {
     await fetch(apiBaseUrl, {
       method: 'POST',
-      headers: { 'Content-Type':'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name })
     });
     todoInput.value = '';
     fetchTodos();
   } catch (err) {
     alert('Error adding task.');
+    console.error(err);
   }
 });
 
 
+async function deleteTodo(id) {
+  try {
+    await fetch(`${apiBaseUrl}/${id}`, { method: 'DELETE' });
+    fetchTodos();
+  } catch (err) {
+    alert('Error deleting task.');
+    console.error(err);
+  }
+}
+
+
+async function updateTodo(id, newName) {
+  newName = newName.trim();
+  if (!newName) return;
+
+  try {
+    const res = await fetch(`${apiBaseUrl}/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: newName })
+    });
+
+    if (!res.ok) throw new Error('Failed to update');
+    console.log(`Todo ${id} updated`);
+  } catch (err) {
+    alert('Error updating task.');
+    console.error(err);
+  }
+}
+
+
+function addTodoToDOM(todo) {
+  const li = document.createElement('li');
+  li.className = 'flex justify-between items-center bg-indigo-100 p-3 rounded-lg mb-2';
+
+  li.innerHTML = `
+    <span contenteditable="true" onblur="updateTodo('${todo.id}', this.innerText)" class="editable">${todo.name}</span>
+    <button onclick="deleteTodo('${todo.id}')" class="text-red-600 hover:underline ml-4">Delete</button>
+  `;
+
+  todoList.appendChild(li);
+}
+
+// Initial fetch
 fetchTodos();
