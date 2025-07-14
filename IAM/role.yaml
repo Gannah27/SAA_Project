@@ -1,0 +1,170 @@
+{
+    "Roles": [
+        {
+            "Path": "/aws-service-role/ops.apigateway.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForAPIGateway",
+            "RoleId": "AROA3636NOLDEZO2T7SNQ",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/ops.apigateway.amazonaws.com/AWSServiceRoleForAPIGateway",
+            "CreateDate": "2025-07-11T21:01:39+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "ops.apigateway.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "The Service Linked Role is used by Amazon API Gateway.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/servicecatalog-appregistry.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForAWSServiceCatalogAppRegistry",
+            "RoleId": "AROA3636NOLDPLUN7NT3T",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/servicecatalog-appregistry.amazonaws.com/AWSServiceRoleForAWSServiceCatalogAppRegistry",
+            "CreateDate": "2025-07-09T11:50:29+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "servicecatalog-appregistry.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/organizations.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForOrganizations",
+            "RoleId": "AROA3636NOLDEOOVDWEDM",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+            "CreateDate": "2025-07-07T07:48:45+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "organizations.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Service-linked role used by AWS Organizations to enable integration of other AWS services with Organizations.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/resource-explorer-2.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForResourceExplorer",
+            "RoleId": "AROA3636NOLDIHBDRLGWL",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "CreateDate": "2025-07-08T19:47:56+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "resource-explorer-2.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/sso.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForSSO",
+            "RoleId": "AROA3636NOLDC7WWND5DU",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO",
+            "CreateDate": "2025-07-09T19:14:24+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "sso.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Service-linked role used by AWS SSO to manage AWS resources, including IAM roles, policies and SAML IdP on your behalf.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/support.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForSupport",
+            "RoleId": "AROA3636NOLDJ3NM36RJX",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+            "CreateDate": "2025-07-05T21:14:05+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "support.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Enables resource access for AWS to provide billing, administrative and support services",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/trustedadvisor.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForTrustedAdvisor",
+            "RoleId": "AROA3636NOLDMY6TVDO4S",
+            "Arn": "arn:aws:iam::-:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+            "CreateDate": "2025-07-05T21:14:05+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "trustedadvisor.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Access for the AWS Trusted Advisor Service to help reduce cost, increase performance, and improve security of your AWS environment.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "LambdaDynamoDBRole",
+            "RoleId": "AROA3636NOLDNYAYNDORY",
+            "Arn": "arn:aws:iam::-:role/LambdaDynamoDBRole",
+            "CreateDate": "2025-07-09T21:30:56+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Allows Lambda functions to call AWS services on your behalf.",
+            "MaxSessionDuration": 3600
+        }
+    ]
+}
